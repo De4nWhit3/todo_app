@@ -39,6 +39,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_adaptive_scaffold: ^0.1.7+1
+  uuid: ^4.1.0
+  either_dart: ^1.0.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
