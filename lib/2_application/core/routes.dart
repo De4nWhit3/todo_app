@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:todo_app/1_domain/entities/unique_id.dart';
 import 'package:todo_app/2_application/pages/dashboard/dashboard_page.dart';
 import 'package:todo_app/2_application/pages/detail/todo_detail_page.dart';
 import 'package:todo_app/2_application/pages/home/home_page.dart';
@@ -62,7 +63,10 @@ final routes = GoRouter(
               },
             ),
           ),
-          body: ToDoDetailPage.pageConfig.child,
+          body: ToDoDetailPageProvider(
+            collectionId: CollectionId.fromUniqueString(
+                state.pathParameters['collectionId'] ?? ''),
+          ),
         );
       },
     )
