@@ -10,7 +10,7 @@ class ToDoRepositoryMock implements ToDoRepository {
   final List<ToDoEntry> toDoEntries = List.generate(
       100,
       (index) => ToDoEntry(
-          decription: 'decription $index',
+          description: 'decription $index',
           isDone: false,
           id: EntryId.fromUniqueString(index.toString())));
 

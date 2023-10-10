@@ -49,8 +49,8 @@ class ToDoDetailPage extends StatelessWidget {
           return const ToDoDetailLoading();
         } else if (state is TodoDetailCubitLoadedState) {
           return ToDoDetailLoaded(
-            entryIds: state.entryIds,
             collectionId: collectionId,
+            entryIds: state.entryIds,
           );
         } else {
           return const ToDoDetailError();
